@@ -28,7 +28,7 @@ namespace Ordering.Application.Features.Orders.Commands.UpdateOrder
                 _logger.LogError("Order does not exists in database");
             }
 
-            _mapper.Map(request, orderToUpdate, typeof(UpdateOrderCommand), typeof(Order));
+            _mapper.Map(request, orderToUpdate, typeof(UpdateOrderCommand), typeof(Order)); 
 
             await _orderRepository.UpdateAsync(orderToUpdate);
 

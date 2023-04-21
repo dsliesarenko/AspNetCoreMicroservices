@@ -11,8 +11,6 @@ namespace Ordering.Infrastructure.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.Sql("DROP TABLE Orders");
-
             migrationBuilder.CreateTable(
                 name: "Orders",
                 columns: table => new
