@@ -26,7 +26,7 @@ namespace Basket.API.Controllers
             _publishEndpoint = publishEndpoint;
         }
 
-        [HttpGet]
+        [HttpGet("{userName}", Name = "GetBasket")]
         public async Task<ActionResult<ShoppingCart>> GetBasket(string userName)
         {
             var basket = await _repository.GetBasket(userName);
